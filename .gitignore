@@ -24,3 +24,6 @@ yarn-error.log*
 
 # visual studio code
 .vscode/
+
+#imagenes
+public/images/
