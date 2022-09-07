@@ -14,16 +14,12 @@ const Passengers = ({ state, send }) => {
 
   const submit = (e) => {
     e.preventDefault();
-    send('ADD', { newPassenger: value })
     changeValue('');
   }
-
-  const { passengers } = state.context;
 
   return (
     <form onSubmit={submit} className='Passengers'>
       <p className='Passengers-title title'>Agrega a las personas que van a volar ✈️</p>
-      {passengers.map((person, idx) => <p className='text' key={`person-${idx}`}>{person}</p>)}
       <input
         id="name"
         name="name"
@@ -51,5 +47,4 @@ const Passengers = ({ state, send }) => {
     </form>
   );
 };
-
 export { Passengers };
