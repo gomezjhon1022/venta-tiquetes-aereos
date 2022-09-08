@@ -7,7 +7,7 @@ import './BaseLayout.css';
 
 const BaseLayout = () => {
   const [state, send] = useMachine(bookingMachine);
-  console.log('nuestra maquina', state.value);
+  console.log('nuestra maquina', state.value, state.context);
   return (
     <div className='BaseLayout'>
       <Nav send={send} state={state} />
